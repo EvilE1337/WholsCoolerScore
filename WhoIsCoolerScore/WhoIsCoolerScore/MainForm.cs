@@ -2,8 +2,6 @@
 using System;
 using System.Linq;
 using System.Windows.Forms;
-using System.Windows;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WhoIsCoolerScore
 {
@@ -38,7 +36,7 @@ namespace WhoIsCoolerScore
 
         public void MaximizeToSecondaryMonitor(ImageForm window)
         {
-            var secondaryScreen = System.Windows.Forms.Screen.AllScreens.Where(s => !s.Primary).FirstOrDefault();
+            var secondaryScreen = Screen.AllScreens.Where(s => !s.Primary).FirstOrDefault();
 
             if (secondaryScreen != null)
             {
